@@ -1,0 +1,22 @@
+# boboshell
+
+FIXME: write description
+
+## Usage
+
+$ lein deps ; lein compile ; lein jar
+$ lein repl
+...
+
+=> (use 'boboshell.core)            ; load library
+=> (open-index "path/to/index")     ; open your index
+=> (pretty-print)                   ; optional. toggle pretty-printing of output
+=> (search "query" "default field") ; alas, no facets yet. for now, just interactive luke
+
+## Installation
+
+FIXME: write
+
+## License
+
+FIXME: write
