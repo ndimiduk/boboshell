@@ -135,6 +135,7 @@
 		   counts)))))
 
 (defn field-names
+  "List index field names."
   []
   (keys (relative-field-sizes)))
 

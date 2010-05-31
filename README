@@ -4,18 +4,19 @@ FIXME: write description
 
 ## Usage
 
-$ lein deps ; lein compile ; lein jar
-$ lein repl
-...
-
-=> (use 'boboshell.core)            ; load library
-=> (open-index "path/to/index")     ; open your index
-=> (pretty-print)                   ; optional. toggle pretty-printing of output
-=> (search "query" "default field") ; alas, no facets yet. for now, just interactive luke
+=> (use 'boboshell.core)        ; load library
+=> (open-index "path/to/index") ; open your index
+=> (pretty-print)               ; optional. toggle pretty-printing of output
+=> (field-names)                ; list the field names in the open index.
+=> (search "query")             ; query the index, guessing at a default field and no faceting
+=> (search "query" {"field1" (FacetSpec.) "field2" (FacetSpec.)}
+                                ; enable default faceting for specified fields.
 
 ## Installation
 
-FIXME: write
+$ lein deps ; lein compile ; lein jar
+$ lein repl
+...
 
 ## License
 
