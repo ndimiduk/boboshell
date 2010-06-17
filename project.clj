@@ -10,5 +10,6 @@
 		 [fastutil/fastutil "5.0.9"]
 		 [log4j "1.2.15"]
 		 [org.springframework/spring "2.5.5"]]
-  :namespaces [boboshell.core])
+  :namespaces [boboshell.core
+	       boboshell.bobo])
 
