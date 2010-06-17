@@ -1,6 +1,6 @@
 (ns boboshell.core
-  (:use [clojure.contrib.def :only (defvar-)])
-  (:use [clojure.contrib.pprint :only (pprint)])
+  (:use [clojure.contrib.def :only (defvar-)]
+	[clojure.contrib.pprint :only (pprint)])
   (:import (java.io File)
 	   (java.util Arrays)
 	   (org.apache.lucene.analysis.standard StandardAnalyzer)
@@ -147,7 +147,8 @@
 	  (relative-field-sizes)))
 
 (defn search
-  "Search against the opened index."
+  #^{:arglists '([query] [query default-field] [ facet-spec-map] [query default-field facet-spec-map])
+     :doc "Search against the opened index."}
   ([query]
      (search query (first (largest-field)) {}))
   ([query default-field-or-facet-map]
